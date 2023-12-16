@@ -1,0 +1,472 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <title>news page</title>
+    <style>
+        body {
+            background-color: #16171d;
+        }
+
+        .card-position {
+            position: relative;
+            bottom: 10rem;
+            margin: 0 1rem;
+            border-radius: 20px;
+            width: 90%;
+        }
+
+        .img-trending-news {
+            border-radius: 20px;
+        }
+
+        .bi-search {
+            color: #666669;
+            position: relative;
+            left: .75rem;
+            top: 1.75rem;
+            font-size: 1rem;
+        }
+
+        .form-control,
+        .form-control:hover,
+        .form-control:focus,
+        .form-control:active {
+            border-color: #21242d;
+            box-shadow: none;
+            width: 16rem;
+            background-color: #21242d;
+            padding: .5rem;
+            border-radius: 1rem;
+            padding-left: 2.25rem;
+        }
+
+        .btn-close {
+            position: relative;
+            bottom: 1.75rem;
+            left: 13.5rem;
+            font-size: 10px;
+        }
+
+
+        .page-item.active .page-link {
+            background-color: #ffc107;
+            border-color: #ffc107;
+            color: black;
+        }
+
+        .page-link,
+        .page-link:hover,
+        .page-link:focus {
+            color: #666669;
+            margin: 0 1rem;
+            background: none;
+            border: none;
+            border-radius: .25rem;
+        }
+
+        .page-link-next {
+            color: white;
+        }
+
+        @media (max-width: 428px) {}
+    </style>
+</head>
+
+<body class="text-capitalize">
+    <div class="container">
+        <header class="header">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container">
+                    <a class="navbar-brand" href="#"><span class="text-light">ca<span
+                                class="text-warning">krypto</span></span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-muted" aria-current="page" href="#">markets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-muted" href="#">portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-muted" href="#">products</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex ">
+                            <span class="btn text-light">log in</span>
+                            <div class="btn bg-warning">sign up</div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!--
+        <div class="dropdown">
+            <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="" alt="">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="" alt="">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+            </ul>
+        </div>-->
+        </header>
+
+        <div class="mt-5">
+            <div class="d-flex justify-content-between align-items-center">
+                <nav class="" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item "><a class="text-decoration-none text-muted" href="#">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active text-warning" aria-current="page">news</li>
+                    </ol>
+                </nav>
+
+                <div class=" d-flex ">
+                    <div class="col-md-8">
+                        <div class="search">
+                            <i class="bi bi-search"></i>
+                            <input type="text" class="form-control" placeholder="Search">
+                            <button class="btn-close btn-close-white" aria-label="Close">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="d-flex bd-highlight mt-5 mb-5">
+            <h1 class="w-100 bd-highlight text-light">trending news</h1>
+            <div class="flex-shrink-0 bd-highlight">
+                <a class="text-decoration-none text-warning" href="">see all</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <img src="image/news-page/bitcoin.jpg" class="img-trending-news w-100" alt="...">
+                <div class="card-position bg-dark">
+                    <div class="p-4">
+                        <span class="text-warning">beincreypto
+                            <span class="fw-bold text-muted">
+                                .
+                            </span>
+                            <span class="text-muted">
+                                47 min ago
+                            </span>
+                        </span>
+                        <span class="h3 text-light d-block mt-3">
+                            bitcoin ($btc) reclaims $49k, here's what...
+                        </span>
+
+                        <p class="card-text text-muted">
+                            Some quick example text to build on the card title and make up the bulk of the
+                            card's content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <img src="image/news-page/bitcoin.jpg" class="img-trending-news w-100" alt="...">
+                <div class="card-position bg-dark">
+                    <div class="p-4">
+                        <span class="text-warning">beincreypto
+                            <span class="fw-bold text-muted">
+                                .
+                            </span>
+                            <span class="text-muted">
+                                47 min ago
+                            </span>
+                        </span>
+                        <span class="h3 text-light d-block mt-3">
+                            bitcoin ($btc) reclaims $49k, here's what...
+                        </span>
+
+                        <p class="card-text text-muted">
+                            Some quick example text to build on the card title and make up the bulk of the
+                            card's content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <img src="image/news-page/bitcoin.jpg" class="img-trending-news w-100" alt="...">
+                <div class="card-position bg-dark">
+                    <div class="p-4">
+                        <span class="text-warning">beincreypto
+                            <span class="fw-bold text-muted">
+                                .
+                            </span>
+                            <span class="text-muted">
+                                47 min ago
+                            </span>
+                        </span>
+                        <span class="h3 text-light d-block mt-3">
+                            bitcoin ($btc) reclaims $49k, here's what...
+                        </span>
+
+                        <p class="card-text text-muted">
+                            Some quick example text to build on the card title and make up the bulk of the
+                            card's content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex bd-highlight mt-5 mb-5">
+                <h1 class="w-100 bd-highlight text-light">lastest news</h1>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-5 col-md-5 col-sm-12">
+                <div class="bg-dark p-4 rounded-3 d-flex align-items-center mb-4">
+                    <img src="image/news-page/b-price.png" class="rounded w-75" alt="">
+                    <div>
+                        <div class="ms-4">
+                            <span class="text-light fw-bold">analysts project 32% upside for coinbace stock
+                                despite...</span>
+                        </div>
+                        <div class="ms-4  mb-5">
+                            <span class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.</span>
+                        </div>
+                        <span class="text-warning ms-4 ">findbold
+                            <span class="fw-bold text-muted">
+                                .
+                            </span>
+                            <span class="text-muted">
+                                47 min ago
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12">
+                <div class="bg-dark p-4 rounded-3 d-flex align-items-center mb-4">
+                    <img src="image/news-page/b-price.png" class="rounded w-75" alt="">
+                    <div>
+                        <div class="ms-4">
+                            <span class="text-light fw-bold">analysts project 32% upside for coinbace stock
+                                despite...</span>
+                        </div>
+                        <div class="ms-4  mb-5">
+                            <span class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit..</span>
+                        </div>
+                        <span class="text-warning ms-4 ">findbold
+                            <span class="fw-bold text-muted">
+                                .
+                            </span>
+                            <span class="text-muted">
+                                47 min ago
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-5 col-md-5 col-sm-12">
+                <div class="bg-dark p-4 rounded-3 d-flex align-items-center mb-4">
+                    <img src="image/news-page/b-price.png" class="rounded w-75" alt="">
+                    <div>
+                        <div class="ms-4">
+                            <span class="text-light fw-bold">analysts project 32% upside for coinbace stock
+                                despite...</span>
+                        </div>
+                        <div class="ms-4  mb-5">
+                            <span class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.</span>
+                        </div>
+                        <span class="text-warning ms-4 ">findbold
+                            <span class="fw-bold text-muted">
+                                .
+                            </span>
+                            <span class="text-muted">
+                                47 min ago
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12">
+                <div class="bg-dark p-4 rounded-3 d-flex align-items-center mb-4">
+                    <img src="image/news-page/b-price.png" class="rounded w-75" alt="">
+                    <div>
+                        <div class="ms-4">
+                            <span class="text-light fw-bold">analysts project 32% upside for coinbace stock
+                                despite...</span>
+                        </div>
+                        <div class="ms-4  mb-5">
+                            <span class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.</span>
+                        </div>
+                        <span class="text-warning ms-4 ">findbold
+                            <span class="fw-bold text-muted">
+                                .
+                            </span>
+                            <span class="text-muted">
+                                47 min ago
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-5 col-md-5 col-sm-12">
+                <div class="bg-dark p-4 rounded-3 d-flex align-items-center mb-4">
+                    <img src="image/news-page/b-price.png" class="rounded w-75" alt="">
+                    <div>
+                        <div class="ms-4">
+                            <span class="text-light fw-bold">analysts project 32% upside for coinbace stock
+                                despite...</span>
+                        </div>
+                        <div class="ms-4  mb-5">
+                            <span class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.</span>
+                        </div>
+                        <span class="text-warning ms-4 ">findbold
+                            <span class="fw-bold text-muted">
+                                .
+                            </span>
+                            <span class="text-muted">
+                                47 min ago
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12">
+                <div class="bg-dark p-4 rounded-3 d-flex align-items-center mb-4">
+                    <img src="image/news-page/b-price.png" class="rounded w-75" alt="">
+                    <div>
+                        <div class="ms-4">
+                            <span class="text-light fw-bold">analysts project 32% upside for coinbace stock
+                                despite...</span>
+                        </div>
+                        <div class="ms-4 mb-5">
+                            <span class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.</span>
+                        </div>
+                        <span class="text-warning ms-4 ">findbold
+                            <span class="fw-bold text-muted">
+                                .
+                            </span>
+                            <span class="text-muted">
+                                47 min ago
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="d-flex justify-content-center">
+            <ul class="pagination pagination-md">
+                <li class="page-item active" aria-current="page">
+                    <span class="page-link">1</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                <li class="page-item">
+                    <a class="page-link-next text-decoration-none" href="#" aria-label="Next">
+                        <span aria-hidden="true">&#x3E;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <footer class="bd-footer py-5 mt-5 ">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-3 mb-3">
+                        <a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="/">
+                            <span class="fs-4 fw-bold text-light">ca<span class="text-warning">krypto</span></span>
+                        </a>
+                        <span class="small text-muted">true choice for your investation plan</span>
+                        <ul class="list-unstyled d-flex flex-row mt-5">
+                            <li class="m-2 p-1 bd-highlight bg-light rounded-3"><i class="bi bi-instagram px-1"></i>
+                            </li>
+                            <li class="m-2 p-1 bd-highlight bg-light rounded-3"><i class="bi bi-youtube px-1"></i>
+                            </li>
+                            <li class="m-2 p-1 bd-highlight bg-light rounded-3"><i class="bi bi-facebook px-1"></i>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                        <h5 class="text-light">about us</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a class="text-decoration-none text-muted" href="">about</a>
+                            </li>
+                            <li class="mb-2"><a class="text-decoration-none text-muted" href="">terms of
+                                    use</a>
+                            </li>
+                            <li class="mb-2"><a class="text-decoration-none text-muted" href="">privacy
+                                    policy</a></li>
+                            <li class="mb-2"><a class="text-decoration-none text-muted" href="">news</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                        <h5 class="text-light">products</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a class="text-decoration-none text-muted" href="">mobile
+                                    app</a>
+                            </li>
+                            <li class="mb-2"><a class="text-decoration-none text-muted" href="">converter</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                        <h5 class="text-light">support</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a class="text-decoration-none text-muted" href=""> help
+                                    center</a>
+                            </li>
+                            <li class="mb-2"><a class="text-decoration-none text-muted" href="">submit a
+                                    request</a>
+                            </li>
+                            <li class="mb-2 text-uppercase"><a class="text-decoration-none text-muted" href="">fqa</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="w-100 bg-secondary">
+                <div class="float-end">
+                    <span class="text-muted fs-6">copyright <span>&copy;</span>2021 crypcoin. all rights
+                        reserved</span>
+                </div>
+        </footer>
+    </div>
+    </div>
+</body>
+
+</html>
